@@ -150,7 +150,7 @@ Gere SOMENTE o conteúdo em markdown puro. Sem mensagens finais ou explicações
       headers: { "Content-Type": "application/json", "Authorization": `Bearer ${GROQ_API_KEY}`},
       body: JSON.stringify({
         model: "llama-3.3-70b-versatile", messages: [{ role: "user", content: prompt }],
-        max_tokens: 8192
+        max_tokens: 32768
       })
     });
 
@@ -239,6 +239,7 @@ function excluirAula(index) {
 
 document.querySelector("#filtroAluno").addEventListener("input", mostrarHistorico);
 mostrarHistorico();
+
 
 
 
