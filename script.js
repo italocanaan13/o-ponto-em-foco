@@ -141,7 +141,7 @@ Tipo de aula: ${tipoAula}
 Tipo de exercícios: ${tipoExercicio}
 Observações: ${observacoes}
 
-Gere SOMENTE o conteúdo em markdown puro. Sem mensagens finais ou explicações.
+Gere SOMENTE o conteúdo em markdown puro. Sem mensagens finais ou explicações. IMPORTANTE: A aula deve ser COMPLETA e DETALHADA. Cada seção deve ter no mínimo 5 tópicos. O desenvolvimento deve ter no mínimo 4 tópicos explicados com profundidade. A lista pos-aula deve ter EXATAMENTE o numero de questoes pedido. Nao resuma nem encurte nenhuma secao.
   `;
 
   try {
@@ -239,6 +239,7 @@ function excluirAula(index) {
 
 document.querySelector("#filtroAluno").addEventListener("input", mostrarHistorico);
 mostrarHistorico();
+
 
 
 
