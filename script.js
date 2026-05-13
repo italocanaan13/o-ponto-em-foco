@@ -1,4 +1,4 @@
-﻿const GEMINI_API_KEY = "AIzaSyB4sYNmEWMGLknqpdvvxuzxNrrM6CX_wIA";
+﻿const GROQ_API_KEY = "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";
 const SERPER_API_KEY = "b3b85aab1cbcb7b9b2e43c35c2a5d72d8acadad4";
 
 const botao = document.querySelector("#gerar");
@@ -11,7 +11,7 @@ async function buscarImagem(descIngles, descPortugues) {
     try {
       const resp = await fetch("https://google.serper.dev/images", {
         method: "POST",
-        headers: { "X-API-KEY": SERPER_API_KEY, "Content-Type": "application/json" },
+        headers: { "X-API-KEY": SERPER_API_KEY, "Content-Type": "application/json", "Authorization": `Bearer ${GROQ_API_KEY}`},
         body: JSON.stringify({ q: termo, num: 5, safe: "active" })
       });
       const dados = await resp.json();
@@ -145,18 +145,18 @@ Gere SOMENTE o conteúdo em markdown puro. Sem mensagens finais ou explicações
   `;
 
   try {
-    const resposta = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=${GEMINI_API_KEY}`, {
+    const resposta = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "Authorization": `Bearer ${GROQ_API_KEY}`},
       body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { maxOutputTokens: 8192, temperature: 0.7 }
+        model: "llama-3.3-70b-versatile", messages: [{ role: "user", content: prompt }],
+        max_tokens: 8192
       })
     });
 
     const dados = await resposta.json();
-    if (!dados.candidates || !dados.candidates[0]) throw new Error("Sem resposta da IA");
-    const textoAula = dados.candidates[0].content.parts[0].text;
+    if (!dados.choices || !dados.choices[0]) throw new Error("Sem resposta da IA");
+    const textoAula = dados.choices[0].message.content;
 
     botao.innerText = "Buscando imagens...";
     let html = renderizarMarkdown(textoAula);
@@ -239,4 +239,6 @@ function excluirAula(index) {
 
 document.querySelector("#filtroAluno").addEventListener("input", mostrarHistorico);
 mostrarHistorico();
+
+
 
