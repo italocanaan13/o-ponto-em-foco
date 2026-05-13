@@ -145,7 +145,7 @@ Gere SOMENTE o conteúdo em markdown puro. Sem mensagens finais ou explicações
   `;
 
   try {
-    const resposta = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${GEMINI_API_KEY}`, {
+    const resposta = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=${GEMINI_API_KEY}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -239,3 +239,4 @@ function excluirAula(index) {
 
 document.querySelector("#filtroAluno").addEventListener("input", mostrarHistorico);
 mostrarHistorico();
+
