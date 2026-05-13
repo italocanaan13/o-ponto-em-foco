@@ -1,0 +1,50 @@
+﻿* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #F5F7FA; color: #1a1a2e; }
+.container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+h1 { font-size: 28px; font-weight: 700; color: #153177; margin-bottom: 4px; }
+.subtitulo { color: #6b7280; font-size: 15px; margin-bottom: 32px; }
+h2 { font-size: 18px; font-weight: 700; color: #153177; margin: 32px 0 12px; }
+.formulario { background: #fff; border-radius: 12px; padding: 28px; border: 1px solid #e5e7eb; display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+.formulario label { font-size: 13px; font-weight: 600; color: #374151; display: block; margin-bottom: 5px; }
+.formulario input, .formulario select, .formulario textarea { width: 100%; padding: 10px 14px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; color: #1a1a2e; background: #f9fafb; transition: border 0.2s; }
+.formulario input:focus, .formulario select:focus, .formulario textarea:focus { outline: none; border-color: #153177; background: #fff; }
+.formulario textarea { height: 80px; resize: vertical; }
+.botoes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.formulario button { padding: 11px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: opacity 0.2s; width: 100%; }
+.formulario button:hover { opacity: 0.85; }
+#gerar { background: #153177; color: #fff; grid-column: span 2; }
+#pdf { background: #059669; color: #fff; }
+#limpar { background: #f3f4f6; color: #374151; }
+#filtroAluno { width: 100%; padding: 10px 14px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; background: #f9fafb; margin-bottom: 12px; display: block; }
+#contadorAulas { font-size: 13px; color: #6b7280; margin-bottom: 16px; }
+.cardHistorico { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; }
+.cardHistorico strong { color: #153177; font-size: 15px; }
+.cardHistorico button { margin-top: 10px; padding: 6px 16px; background: #fee2e2; color: #991b1b; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; font-weight: 600; }
+.cardHistorico button:hover { background: #fca5a5; }
+#aulaFinal { font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; line-height: 1.75; background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; padding: 28px; margin-bottom: 28px; min-height: 20px; }
+.cabecalhoApostila { background: #153177; color: #fff; padding: 28px 36px 22px; border-radius: 8px; margin-bottom: 36px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.marca { font-size: 22px; font-weight: 700; color: #fff; }
+.submarca { font-size: 13px; color: rgba(255,255,255,0.72); margin-top: 2px; }
+.apo-h1 { font-size: 22px; font-weight: 700; color: #153177; border-left: 4px solid #F25F1D; padding-left: 14px; margin: 32px 0 16px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.apo-h2 { font-size: 17px; font-weight: 700; color: #153177; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 1.5px solid #e0e7f5; }
+.apo-h3 { font-size: 14px; font-weight: 700; color: #F25F1D; text-transform: uppercase; letter-spacing: 0.8px; margin: 24px 0 10px; }
+.apo-p { font-size: 15px; margin: 0 0 12px; color: #2d2d2d; line-height: 1.8; }
+.apo-divider { border: none; border-top: 1.5px solid #e0e7f5; margin: 28px 0; }
+.apo-destaque { background: #eef3fb; border-left: 4px solid #153177; border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 14px; color: #153177; margin: 16px 0; font-style: italic; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.apo-lista { margin: 8px 0 16px 0; padding: 0; list-style: none; }
+.apo-item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #2d2d2d; padding: 5px 0; }
+.apo-item::before { content: ''; display: inline-block; width: 7px; height: 7px; min-width: 7px; background: #F25F1D; border-radius: 50%; margin-top: 8px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.apo-questao { display: flex; align-items: flex-start; background: #fff; border: 1.5px solid #dde4f0; border-radius: 10px; margin: 14px 0; overflow: hidden; page-break-inside: avoid; break-inside: avoid; }
+.apo-num { background: #153177; color: #fff; font-size: 14px; font-weight: 700; min-width: 42px; text-align: center; flex-shrink: 0; align-self: stretch; display: flex; align-items: flex-start; justify-content: center; padding-top: 18px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.apo-questao-corpo { padding: 14px 18px; font-size: 15px; color: #1a1a2e; line-height: 1.65; flex: 1; }
+.apo-alternativa { display: flex; align-items: flex-start; gap: 10px; padding: 6px 18px 6px 60px; font-size: 14px; color: #3a3a3a; border-top: 1px solid #f0f3fa; }
+.apo-letra { font-weight: 700; color: #153177; min-width: 22px; }
+.apo-imagem { text-align: center; margin: 20px 0; page-break-inside: avoid; }
+.apo-imagem img { max-width: 100%; max-height: 380px; object-fit: contain; border-radius: 8px; border: 1px solid #e5e7eb; }
+.apo-imagem-legenda { font-size: 12px; color: #6b7280; margin-top: 6px; font-style: italic; }
+.apo-imagem-placeholder { background: #f0f4ff; border: 1px dashed #153177; border-radius: 8px; padding: 16px; text-align: center; color: #153177; font-size: 13px; margin: 16px 0; }
+@media print {
+  body { background: #fff !important; }
+  .cabecalhoApostila, .apo-num, .apo-destaque, .apo-item::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .apo-questao { page-break-inside: avoid; break-inside: avoid; }
+}

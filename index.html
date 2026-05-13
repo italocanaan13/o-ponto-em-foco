@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Ponto em Foco</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>O Ponto em Foco</h1>
+    <p class="subtitulo">Gerador de aulas personalizado</p>
+    <div class="formulario">
+      <div>
+        <label>Nome do aluno</label>
+        <input type="text" id="aluno">
+      </div>
+      <div>
+        <label>Série/Ano</label>
+        <select id="serie">
+          <optgroup label="Ensino Fundamental I">
+            <option value="1º ano - Fundamental I">1º ano</option>
+            <option value="2º ano - Fundamental I">2º ano</option>
+            <option value="3º ano - Fundamental I">3º ano</option>
+            <option value="4º ano - Fundamental I">4º ano</option>
+            <option value="5º ano - Fundamental I">5º ano</option>
+          </optgroup>
+          <optgroup label="Ensino Fundamental II">
+            <option value="6º ano - Fundamental II">6º ano</option>
+            <option value="7º ano - Fundamental II">7º ano</option>
+            <option value="8º ano - Fundamental II">8º ano</option>
+            <option value="9º ano - Fundamental II">9º ano</option>
+          </optgroup>
+          <optgroup label="Ensino Médio">
+            <option value="1º ano - Ensino Médio">1º ano</option>
+            <option value="2º ano - Ensino Médio">2º ano</option>
+            <option value="3º ano - Ensino Médio">3º ano</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label>Nível do aluno</label>
+        <select id="nivel">
+          <option value="básico">Básico</option>
+          <option value="médio">Médio</option>
+          <option value="avançado">Avançado</option>
+        </select>
+      </div>
+      <div>
+        <label>Objetivo da aula</label>
+        <input type="text" id="objetivo" placeholder="Ex: aprender, revisar, fixar...">
+      </div>
+      <div>
+        <label>Matéria</label>
+        <select id="materia">
+          <optgroup label="Fundamental I">
+            <option value="Português">Português</option>
+            <option value="Matemática">Matemática</option>
+            <option value="Ciências">Ciências</option>
+            <option value="História">História</option>
+            <option value="Geografia">Geografia</option>
+            <option value="Artes">Artes</option>
+          </optgroup>
+          <optgroup label="Fundamental II">
+            <option value="Português">Português</option>
+            <option value="Matemática">Matemática</option>
+            <option value="Ciências">Ciências</option>
+            <option value="História">História</option>
+            <option value="Geografia">Geografia</option>
+            <option value="Inglês">Inglês</option>
+            <option value="Artes">Artes</option>
+          </optgroup>
+          <optgroup label="Ensino Médio">
+            <option value="Português e Literatura">Português e Literatura</option>
+            <option value="Matemática">Matemática</option>
+            <option value="Biologia">Biologia</option>
+            <option value="Física">Física</option>
+            <option value="Química">Química</option>
+            <option value="História">História</option>
+            <option value="Geografia">Geografia</option>
+            <option value="Filosofia">Filosofia</option>
+            <option value="Sociologia">Sociologia</option>
+            <option value="Inglês">Inglês</option>
+            <option value="Redação">Redação</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label>Tema da aula</label>
+        <input type="text" id="tema" placeholder="Ex: Membrana Plasmática...">
+      </div>
+      <div>
+        <label>Quantidade de exercícios</label>
+        <input type="number" id="questoes" min="1" max="30" placeholder="Ex: 10">
+      </div>
+      <div>
+        <label>Tipo de aula</label>
+        <select id="tipoAula">
+          <option value="explicativa">Explicativa</option>
+          <option value="revisão">Revisão</option>
+          <option value="pré-prova">Pré-prova</option>
+          <option value="fixação">Fixação</option>
+        </select>
+      </div>
+      <div>
+        <label>Tipo de exercícios</label>
+        <select id="tipoExercicio">
+          <option value="múltipla escolha">Múltipla escolha</option>
+          <option value="discursivos">Discursivos</option>
+          <option value="mistos">Mistos</option>
+        </select>
+      </div>
+      <div>
+        <label>Observações</label>
+        <textarea id="observacoes" placeholder="Ex: Focar em questões ENEM..."></textarea>
+      </div>
+      <div class="botoes">
+        <button id="gerar">Gerar Aula</button>
+        <button id="pdf">Gerar PDF</button>
+        <button id="limpar">Limpar tudo</button>
+      </div>
+    </div>
+    <div id="aulaFinal"></div>
+    <input type="text" id="filtroAluno" placeholder="Filtrar por aluno">
+    <p id="contadorAulas">Total de aulas: 0</p>
+    <h2>Histórico de aulas</h2>
+    <div id="historico"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
