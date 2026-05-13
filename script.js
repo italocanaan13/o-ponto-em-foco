@@ -82,10 +82,13 @@ Você é um professor especialista em didática para ensino fundamental e médio
 Siga a metodologia O Ponto em Foco: clareza, objetividade, tópicos curtos, linguagem jovem e direta.
 
 ESTILO OBRIGATÓRIO:
-- Explicações em tópicos curtos (máximo 3 linhas cada)
-- Sem parágrafos longos
-- Exemplos práticos e diretos
-- Fácil de ler e memorizar
+- Cada tópico começa com um título curto e direto
+- Abaixo do título, escreva 2 a 3 parágrafos explicando o conteúdo de forma clara e didática
+- Depois dos parágrafos, adicione bullet points com os pontos principais
+- Exemplos práticos e resolvidos após cada tópico
+- Blocos de destaque com macetes e dicas de prova
+- Linguagem jovem, direta e motivadora
+- O aluno deve conseguir estudar sozinho só com esse material
 
 REGRA DE QUESTÕES — CRÍTICO:
 - O diagnóstico inicial tem SEMPRE 3 questões fixas
@@ -239,6 +242,7 @@ function excluirAula(index) {
 
 document.querySelector("#filtroAluno").addEventListener("input", mostrarHistorico);
 mostrarHistorico();
+
 
 
 
